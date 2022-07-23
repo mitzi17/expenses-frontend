@@ -6,12 +6,13 @@ const Account = (props) => {
     console.log(props.accounts)
     
    const { id } = useParams()
-   //let account = props.accounts.[accountId]
-   console.log(id)
+   let account = props.accounts[id - 1]
+   console.log(account)
+   
 
     return (
         <li>
-            {props.account.id}: {props.account.name} - {props.account.balance}
+            {account ? account.name : null} - {account ? account.balance : null}
         </li>
     )
 }
