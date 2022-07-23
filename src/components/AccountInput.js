@@ -6,7 +6,8 @@ class AccountInput extends React.Component {
 
     state = {
         name: '',
-        balance: ''
+        balance: '',
+        id: ''
     }
 
     handleChange = (event) => {
@@ -20,7 +21,8 @@ class AccountInput extends React.Component {
         this.props.addAccount(this.state)
         this.setState({
             name: '',
-            balance: ''
+            balance: '',
+            id: ''
         })
     }
 
