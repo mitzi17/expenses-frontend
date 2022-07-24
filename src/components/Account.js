@@ -1,17 +1,18 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 
 const Account = (props) => {
 
-    console.log(props.accounts)
+//console.log(props.accounts)
     
    const { id } = useParams()
    let account = props.accounts[id - 1]
-   console.log(account)
+   //console.log(account)
    
 
     return (
         <li>
+            
             {account ? account.name : null} - {account ? account.balance : null}
         </li>
     )
