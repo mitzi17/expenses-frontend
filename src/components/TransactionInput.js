@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 class TransactionInput extends React.Component {
 
@@ -6,7 +7,16 @@ class TransactionInput extends React.Component {
         return(
 
             <div>
-                TransactionInput
+                
+                <form>
+                    <label>Transaction Type:</label>
+                    <select>
+                        <option>deposit</option>
+                        <option>withdraw</option>
+                    </select>
+                    <label>Transaction Amount:</label>
+                    <input type="text"/>
+                </form>
             </div>
 
         )
@@ -14,4 +24,4 @@ class TransactionInput extends React.Component {
 
 }
 
-export default TransactionInput
+export default connect(null)(TransactionInput)
