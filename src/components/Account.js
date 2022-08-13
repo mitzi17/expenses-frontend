@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, useParams } from 'react-router-dom'
+import TransactionsContainer from '../containers/TransactionsContainer'
 
 const Account = (props) => {
 
@@ -11,10 +12,12 @@ const Account = (props) => {
    
 
     return (
-        <li>
-            
-            {account ? account.name : null} - {account ? account.balance : null}
-        </li>
+        <div>
+            <h2>
+                {account ? account.name : null} - {account ? account.balance : null}
+            </h2>
+            <TransactionsContainer account={account}/>
+        </div>
     )
 }
 
