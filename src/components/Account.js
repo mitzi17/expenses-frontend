@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import TransactionsContainer from '../containers/TransactionsContainer'
+import AccountEdit from './AccountEdit'
 
 const Account = (props) => {
 
@@ -17,6 +18,7 @@ const Account = (props) => {
                 {account ? account.name : null} - {account ? account.balance : null}
             </h2>
             <TransactionsContainer account={account}/>
+            <AccountEdit account={account}/>
         </div>
     )
 }
