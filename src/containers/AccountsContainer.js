@@ -6,6 +6,7 @@ import { fetchAccounts } from '../actions/fetchAccounts'
 import AccountInput from '../components/AccountInput'
 import Accounts from '../components/Accounts'
 import Account from '../components/Account'
+import Homepage from '../components/Homepage'
 
 
 
@@ -20,13 +21,13 @@ class AccountsContainer extends React.Component {
         return(
 
             <div>
-                AccountsContainer
+                
                 <Routes>
+                    <Route exact path='/' element={<Homepage/>} />
                     <Route path='/accounts/new' element={<AccountInput/>} />
                     
                     <Route path='accounts' element={<Accounts accounts={this.props.accounts}/>} />
-                        <Route path='/accounts/:id' element={<Account accounts={this.props.accounts}/>} />
-                    
+                    <Route path='/accounts/:id' element={<Account accounts={this.props.accounts}/>} />
                 </Routes>
 
                 
