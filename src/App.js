@@ -1,6 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+
 import AccountsContainer from './containers/AccountsContainer'
+import Navbar from './components/Navbar';
+
+
 
 class App extends React.Component {
 
@@ -11,9 +15,12 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        < AccountsContainer/>
+
+        <Navbar />
+        <AccountsContainer />
+
       </div>
-    );
+    )
   }
   
 }
