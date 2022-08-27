@@ -29,15 +29,33 @@ class TransactionInput extends React.Component {
 
             <div>
                 
-                <form onSubmit={this.handleSubmit}>
-                    <label>Transaction Type:</label>
-                    <select name='kind' value={this.state.kind} onChange={this.handleChange}>
-                        <option>deposit</option>
-                        <option>withdraw</option>
-                    </select>
-                    <label>Transaction Amount:</label>
-                    <input type="text" name='amount' value={this.state.amount} onChange={this.handleChange}/>
-                    <input type="submit"/>
+                <form onSubmit={this.handleSubmit} class="box">
+                <p class="title is-4 has-text-link has-text-left">Create New Transaction</p>
+                    <div class="field">
+                    <label class="label">Transaction Type:</label>
+                        <div class="control">
+                            <div class="select is-link">
+                                <select name='kind' value={this.state.kind} onChange={this.handleChange}>
+                                    <option>deposit</option>
+                                    <option>withdraw</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="field">
+                <label class="label">Transaction Amount:</label>
+                    <div class="control">
+                        <input class="input is-link" type="text" name='amount' value={this.state.amount} onChange={this.handleChange}/>
+                        
+                    </div>
+                </div>
+
+                <div class="control">
+                <button class="button is-link">Submit</button>
+                </div>
+                
+                    
                 </form>
             </div>
 
