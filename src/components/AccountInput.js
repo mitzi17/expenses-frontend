@@ -31,12 +31,28 @@ class AccountInput extends React.Component {
         return(
 
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>Checking Account Name:</label>
-                    <input type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br/>
-                    <label>Checking Account Balance:</label>
-                    <input type='text' placeholder='Balance' value={this.state.balance} name='balance' onChange={this.handleChange}/><br/>
-                    <input type='submit'/>
+                <form onSubmit={this.handleSubmit} class="box">
+                <p class="title is-4 has-text-link has-text-left">Create New Account</p>
+
+                <div class="field">
+                <label class="label">Checking Account Name:</label>
+                    <div class="control">
+                        <input class="input is-link" type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br/>
+                    </div>
+                </div>
+
+                <div class="field">
+                <label class="label">Checking Account Balance:</label>
+                    <div class="control">
+                        <input class="input is-link" type='text' placeholder='Balance' value={this.state.balance} name='balance' onChange={this.handleChange}/><br/>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <button class="button is-link">Submit</button>
+                </div>
+
+                
 
                 </form>
             </div>
