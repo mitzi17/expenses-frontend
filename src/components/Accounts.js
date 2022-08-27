@@ -8,11 +8,11 @@ const Accounts = (props) => {
     return (
 
         <div>
-            ACCOUNTS
+            <p class="title is-2 has-text-link has-text-centered">Accounts</p>
             {props.accounts.map(account =>
-                <li key={account.id}>
+                <div class="box" key={account.id}>
                     <Link to={`/accounts/${account.id}`}>{account.name}</Link>
-                </li>)}
+                </div>)}
         </div>
 
     )
