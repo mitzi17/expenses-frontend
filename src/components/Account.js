@@ -14,11 +14,12 @@ const Account = (props) => {
 
     return (
         <div>
-            <h2>
-                {account ? account.name : null} - {account ? account.balance : null}
-            </h2>
-            <TransactionsContainer account={account}/>
+            <p class="title is-2 has-text-link has-text-centered">
+                {account ? account.name : null} - ${account ? account.balance : null}
+            </p>
             <AccountEdit account={account}/>
+            <TransactionsContainer account={account}/>
+            
         </div>
     )
 }
