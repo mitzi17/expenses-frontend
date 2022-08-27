@@ -11,10 +11,10 @@ const handleDelete = (transaction) => {
 }
 
     return (
-        <div>
-            Transactions
+        <div class="box">
+            <p class="title is-4 has-text-link has-text-left">All Transactions</p>
             {props.transactions && props.transactions.map(transaction => 
-                <li key={transaction.id}> {transaction.kind} - {transaction.amount} - {transaction.date} <button onClick={() => handleDelete(transaction)}>DELETE</button></li>)}
+                <div class="box" key={transaction.id}> {transaction.kind} - {transaction.amount} - {transaction.date} <button onClick={() => handleDelete(transaction)}>DELETE</button></div>)}
         </div>
     )
 
