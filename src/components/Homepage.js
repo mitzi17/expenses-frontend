@@ -8,11 +8,9 @@ export default function Homepage() {
         
       <div class="card">
 
-        <header class="card-header" />
-          <p class="card-header-title">
-            MY EXPENSE TRACKER
-          </p>
-        <header/>
+        <div class="box">
+        <p class="title is-2 has-text-link has-text-centered">MY EXPENSE TRACKER</p>
+        </div>
 
         <div class="card-image">
           <figure class="image is-4by3">
