@@ -41,8 +41,6 @@ class AccountEdit extends React.Component {
                         </div>
                     </div>
 
-                    <label>Checking Account Balance:</label>
-                    <input type='text' placeholder='hello' value={this.state.balance} name='balance' onChange={this.handleChange}/><br/>
                     
                     <div class="control">
                         <button class="button is-link">Submit</button>
