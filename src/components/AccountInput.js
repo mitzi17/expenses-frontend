@@ -2,12 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { addAccount } from '../actions/addAccount'
 
+
 class AccountInput extends React.Component {
 
     state = {
         name: '',
         balance: '',
-        id: ''
+        id: '',
+        isSubmitted: false
     }
 
     handleChange = (event) => {
@@ -22,11 +24,15 @@ class AccountInput extends React.Component {
         this.setState({
             name: '',
             balance: '',
-            id: ''
+            id: '',
         })
     }
 
+  
+
     render(){
+
+        
 
         return(
 
@@ -51,10 +57,10 @@ class AccountInput extends React.Component {
                 <div class="control">
                     <button class="button is-link">Submit</button>
                 </div>
+            </form>
 
-                
+            
 
-                </form>
             </div>
         )
 
