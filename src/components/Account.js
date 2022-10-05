@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import TransactionsContainer from '../containers/TransactionsContainer'
 import AccountEdit from './AccountEdit'
 
@@ -10,7 +10,7 @@ const Account = (props) => {
    const { id } = useParams()
    let account = props.accounts[id - 1]
    //console.log(account)
-   
+
 
     return (
         <div>
@@ -19,7 +19,6 @@ const Account = (props) => {
             </p>
             <AccountEdit account={account}/>
             <TransactionsContainer account={account}/>
-            
         </div>
     )
 }
