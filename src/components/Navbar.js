@@ -1,5 +1,4 @@
 import React from 'react'
-import Accounts from './Accounts'
 
 export default function Navbar() {
 
@@ -8,9 +7,9 @@ export default function Navbar() {
       <div class="navbar-brand">
     
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true">HOME</span>
-          <span aria-hidden="true">PROFILE</span>
-          <span aria-hidden="true">ACCOUNTS</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
     
@@ -45,5 +44,4 @@ export default function Navbar() {
       </div>
     </nav>
   )
-
 }
