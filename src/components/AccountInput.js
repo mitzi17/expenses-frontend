@@ -8,8 +8,7 @@ class AccountInput extends React.Component {
     state = {
         name: '',
         balance: '',
-        id: '',
-        isSubmitted: false
+        id: ''
     }
 
     handleChange = (event) => {
@@ -19,6 +18,7 @@ class AccountInput extends React.Component {
     }
 
     handleSubmit = (event) => {
+        debugger
         event.preventDefault()
         this.props.addAccount(this.state)
         this.setState({
@@ -28,44 +28,34 @@ class AccountInput extends React.Component {
         })
     }
 
-  
-
     render(){
-
-        
-
         return(
 
             <div>
                 <form onSubmit={this.handleSubmit} class="box">
-                <p class="title is-4 has-text-link has-text-left">Create New Account</p>
+                    <p class="title is-4 has-text-link has-text-left">Create New Account</p>
 
-                <div class="field">
-                <label class="label">Checking Account Name:</label>
-                    <div class="control">
+                    <div class="field">
+                        <label class="label">Checking Account Name:</label>
+                        <div class="control">
                         <input class="input is-link" type='text' placeholder='Name' value={this.state.name} name='name' onChange={this.handleChange}/><br/>
+                        </div>
                     </div>
-                </div>
 
-                <div class="field">
-                <label class="label">Checking Account Balance:</label>
-                    <div class="control">
+                    <div class="field">
+                        <label class="label">Checking Account Balance:</label>
+                        <div class="control">
                         <input class="input is-link" type='text' placeholder='Balance' value={this.state.balance} name='balance' onChange={this.handleChange}/><br/>
+                        </div>
                     </div>
-                </div>
 
-                <div class="control">
+                    <div class="control">
                     <button class="button is-link">Submit</button>
-                </div>
-            </form>
-
-            
-
+                    </div>
+                </form>
             </div>
         )
-
     }
-
 }
 
 export default connect(null, {addAccount})(AccountInput)
