@@ -8,7 +8,7 @@ const Account = (props) => {
 //console.log(props.accounts)
     
    const { id } = useParams()
-   let account = props.accounts[id - 1]
+   let account = props.accounts.find(account => account.id == id)
    //console.log(account)
 
 
